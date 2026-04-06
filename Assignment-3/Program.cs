@@ -124,14 +124,13 @@ class Program
         Console.WriteLine("Student not found!");
     }
 
-    // ✅ NEW FEATURE
     static void ExportToCSV()
     {
         string path = "students.csv";
 
         using (StreamWriter writer = new StreamWriter(path))
         {
-            writer.WriteLine("StudentId,Name,Age,Course"); // Header
+            writer.WriteLine("StudentId,Name,Age,Course"); 
 
             for (int i = 0; i < count; i++)
             {
