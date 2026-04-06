@@ -1,187 +1,123 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.IO;
 
 class Program
 {
-    static List<Student> students = new List<Student>();
+    static int[] studentId = new int[100];
+    static string[] name = new string[100];
+    static int[] age = new int[100];
+    static string[] course = new string[100];
+
+    static int count = 0;
 
     static void Main()
     {
         while (true)
         {
-            Console.WriteLine("\n==== STUDENT MANAGEMENT SYSTEM ====");
-            Console.WriteLine("1. Add Student");
-            Console.WriteLine("2. Update Student");
-            Console.WriteLine("3. Delete Student");
-            Console.WriteLine("4. List Students");
-            Console.WriteLine("5. Find by ID");
-            Console.WriteLine("6. Export to CSV");
-            Console.WriteLine("0. Exit");
+            Console.WriteLine("\n1. Add Student");
+            Console.WriteLine("2. View Students");
+            Console.WriteLine("3. Update Student");
+            Console.WriteLine("4. Delete Student");
+            Console.WriteLine("5. Exit");
 
             Console.Write("Enter choice: ");
-            int choice;
-
-            if (!int.TryParse(Console.ReadLine(), out choice))
-            {
-                Console.WriteLine("Invalid input!");
-                continue;
-            }
+            int choice = Convert.ToInt32(Console.ReadLine());
 
             switch (choice)
             {
                 case 1: AddStudent(); break;
-                case 2: UpdateStudent(); break;
-                case 3: DeleteStudent(); break;
-                case 4: ListStudents(); break;
-                case 5: FindStudent(); break;
-                case 6: ExportToCSV(); break;
-                case 0: return;
-                default: Console.WriteLine("Invalid choice!"); break;
+                case 2: ViewStudents(); break;
+                case 3: UpdateStudent(); break;
+                case 4: DeleteStudent(); break;
+                case 5: return;
+                default: Console.WriteLine("Invalid choice"); break;
             }
         }
     }
 
     static void AddStudent()
     {
-        try
+        Console.Write("Enter ID: ");
+        studentId[count] = Convert.ToInt32(Console.ReadLine());
+
+        Console.Write("Enter Name: ");
+        name[count] = Console.ReadLine();
+
+        Console.Write("Enter Age: ");
+        age[count] = Convert.ToInt32(Console.ReadLine());
+
+        Console.Write("Enter Course: ");
+        course[count] = Console.ReadLine();
+
+        count++;
+        Console.WriteLine("Student Added Successfully!");
+    }
+
+    static void ViewStudents()
+    {
+        if (count == 0)
         {
-            Student s = new Student();
-
-            Console.Write("Enter ID: ");
-            s.StudentId = int.Parse(Console.ReadLine());
-
-            Console.Write("Enter Name: ");
-            s.Name = Console.ReadLine();
-
-            Console.Write("Enter Age: ");
-            s.Age = int.Parse(Console.ReadLine());
-
-            Console.Write("Enter Course: ");
-            s.Course = Console.ReadLine();
-
-            students.Add(s);
-            Console.WriteLine("Student Added!");
+            Console.WriteLine("No records found!");
+            return;
         }
-        catch
+
+        for (int i = 0; i < count; i++)
         {
-            Console.WriteLine("Invalid input!");
+            Console.WriteLine("\nID: " + studentId[i]);
+            Console.WriteLine("Name: " + name[i]);
+            Console.WriteLine("Age: " + age[i]);
+            Console.WriteLine("Course: " + course[i]);
         }
     }
 
     static void UpdateStudent()
     {
         Console.Write("Enter ID to update: ");
-        int id;
+        int id = Convert.ToInt32(Console.ReadLine());
 
-        if (!int.TryParse(Console.ReadLine(), out id))
+        for (int i = 0; i < count; i++)
         {
-            Console.WriteLine("Invalid input!");
-            return;
+            if (studentId[i] == id)
+            {
+                Console.Write("Enter New Name: ");
+                name[i] = Console.ReadLine();
+
+                Console.Write("Enter New Age: ");
+                age[i] = Convert.ToInt32(Console.ReadLine());
+
+                Console.Write("Enter New Course: ");
+                course[i] = Console.ReadLine();
+
+                Console.WriteLine("Updated Successfully!");
+                return;
+            }
         }
 
-        Student s = students.Find(x => x.StudentId == id);
-
-        if (s == null)
-        {
-            Console.WriteLine("Student not found!");
-            return;
-        }
-
-        Console.Write("Enter new Name: ");
-        s.Name = Console.ReadLine();
-
-        Console.Write("Enter new Age: ");
-        s.Age = int.Parse(Console.ReadLine());
-
-        Console.Write("Enter new Course: ");
-        s.Course = Console.ReadLine();
-
-        Console.WriteLine("Student Updated!");
+        Console.WriteLine("Student not found!");
     }
 
     static void DeleteStudent()
     {
         Console.Write("Enter ID to delete: ");
-        int id;
+        int id = Convert.ToInt32(Console.ReadLine());
 
-        if (!int.TryParse(Console.ReadLine(), out id))
+        for (int i = 0; i < count; i++)
         {
-            Console.WriteLine("Invalid input!");
-            return;
-        }
-
-        Student s = students.Find(x => x.StudentId == id);
-
-        if (s == null)
-        {
-            Console.WriteLine("Student not found!");
-            return;
-        }
-
-        students.Remove(s);
-        Console.WriteLine("Student Deleted!");
-    }
-
-    static void ListStudents()
-    {
-        if (students.Count == 0)
-        {
-            Console.WriteLine("No students found.");
-            return;
-        }
-
-        foreach (var s in students)
-        {
-            Console.WriteLine($"ID: {s.StudentId}, Name: {s.Name}, Age: {s.Age}, Course: {s.Course}");
-        }
-    }
-
-    static void FindStudent()
-    {
-        Console.Write("Enter ID: ");
-        int id;
-
-        if (!int.TryParse(Console.ReadLine(), out id))
-        {
-            Console.WriteLine("Invalid input!");
-            return;
-        }
-
-        Student s = students.Find(x => x.StudentId == id);
-
-        if (s == null)
-        {
-            Console.WriteLine("Student not found!");
-        }
-        else
-        {
-            Console.WriteLine($"ID: {s.StudentId}, Name: {s.Name}, Age: {s.Age}, Course: {s.Course}");
-        }
-    }
-
-    // CSV EXPORT PART
-    static void ExportToCSV()
-    {
-        try
-        {
-            string filePath = @"D:\Projects\DotNet-Assignments\Assignment-3\students.csv";
-
-            using (StreamWriter writer = new StreamWriter(filePath))
+            if (studentId[i] == id)
             {
-                writer.WriteLine("StudentId,Name,Age,Course");
-
-                foreach (var s in students)
+                for (int j = i; j < count - 1; j++)
                 {
-                    writer.WriteLine($"{s.StudentId},{s.Name},{s.Age},{s.Course}");
+                    studentId[j] = studentId[j + 1];
+                    name[j] = name[j + 1];
+                    age[j] = age[j + 1];
+                    course[j] = course[j + 1];
                 }
-            }
 
-            Console.WriteLine("Data exported to students.csv");
+                count--;
+                Console.WriteLine("Deleted Successfully!");
+                return;
+            }
         }
-        catch (Exception ex)
-        {
-            Console.WriteLine("Error: " + ex.Message);
-        }
+
+        Console.WriteLine("Student not found!");
     }
 }
