@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 
 class Program
 {
@@ -17,7 +18,8 @@ class Program
             Console.WriteLine("2. View Students");
             Console.WriteLine("3. Update Student");
             Console.WriteLine("4. Delete Student");
-            Console.WriteLine("5. Exit");
+            Console.WriteLine("5. Export to CSV");
+            Console.WriteLine("6. Exit");
 
             Console.Write("Enter choice: ");
             int choice = Convert.ToInt32(Console.ReadLine());
@@ -28,7 +30,8 @@ class Program
                 case 2: ViewStudents(); break;
                 case 3: UpdateStudent(); break;
                 case 4: DeleteStudent(); break;
-                case 5: return;
+                case 5: ExportToCSV(); break;
+                case 6: return;
                 default: Console.WriteLine("Invalid choice"); break;
             }
         }
@@ -119,5 +122,23 @@ class Program
         }
 
         Console.WriteLine("Student not found!");
+    }
+
+    // ✅ NEW FEATURE
+    static void ExportToCSV()
+    {
+        string path = "students.csv";
+
+        using (StreamWriter writer = new StreamWriter(path))
+        {
+            writer.WriteLine("StudentId,Name,Age,Course"); // Header
+
+            for (int i = 0; i < count; i++)
+            {
+                writer.WriteLine($"{studentId[i]},{name[i]},{age[i]},{course[i]}");
+            }
+        }
+
+        Console.WriteLine("CSV file created successfully at: " + Path.GetFullPath(path));
     }
 }
