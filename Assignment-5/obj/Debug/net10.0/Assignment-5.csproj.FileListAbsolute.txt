@@ -1,0 +1,15 @@
+D:\Projects\DotNet-Assignments\Assignment-5\bin\Debug\net10.0\Assignment-5.exe
+D:\Projects\DotNet-Assignments\Assignment-5\bin\Debug\net10.0\Assignment-5.deps.json
+D:\Projects\DotNet-Assignments\Assignment-5\bin\Debug\net10.0\Assignment-5.runtimeconfig.json
+D:\Projects\DotNet-Assignments\Assignment-5\bin\Debug\net10.0\Assignment-5.dll
+D:\Projects\DotNet-Assignments\Assignment-5\bin\Debug\net10.0\Assignment-5.pdb
+D:\Projects\DotNet-Assignments\Assignment-5\obj\Debug\net10.0\Assignment-5.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\DotNet-Assignments\Assignment-5\obj\Debug\net10.0\Assignment-5.AssemblyInfoInputs.cache
+D:\Projects\DotNet-Assignments\Assignment-5\obj\Debug\net10.0\Assignment-5.AssemblyInfo.cs
+D:\Projects\DotNet-Assignments\Assignment-5\obj\Debug\net10.0\Assignment-5.csproj.CoreCompileInputs.cache
+D:\Projects\DotNet-Assignments\Assignment-5\obj\Debug\net10.0\Assignment-5.sourcelink.json
+D:\Projects\DotNet-Assignments\Assignment-5\obj\Debug\net10.0\Assignment-5.dll
+D:\Projects\DotNet-Assignments\Assignment-5\obj\Debug\net10.0\refint\Assignment-5.dll
+D:\Projects\DotNet-Assignments\Assignment-5\obj\Debug\net10.0\Assignment-5.pdb
+D:\Projects\DotNet-Assignments\Assignment-5\obj\Debug\net10.0\Assignment-5.genruntimeconfig.cache
+D:\Projects\DotNet-Assignments\Assignment-5\obj\Debug\net10.0\ref\Assignment-5.dll

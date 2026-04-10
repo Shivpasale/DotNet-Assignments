@@ -1,0 +1,15 @@
+D:\Projects\DotNet-Assignments\Assignment-4\bin\Debug\net10.0\Assignment-4.exe
+D:\Projects\DotNet-Assignments\Assignment-4\obj\Debug\net10.0\Assignment-4.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\DotNet-Assignments\Assignment-4\obj\Debug\net10.0\Assignment-4.AssemblyInfoInputs.cache
+D:\Projects\DotNet-Assignments\Assignment-4\obj\Debug\net10.0\Assignment-4.AssemblyInfo.cs
+D:\Projects\DotNet-Assignments\Assignment-4\obj\Debug\net10.0\Assignment-4.csproj.CoreCompileInputs.cache
+D:\Projects\DotNet-Assignments\Assignment-4\obj\Debug\net10.0\Assignment-4.sourcelink.json
+D:\Projects\DotNet-Assignments\Assignment-4\obj\Debug\net10.0\Assignment-4.dll
+D:\Projects\DotNet-Assignments\Assignment-4\obj\Debug\net10.0\refint\Assignment-4.dll
+D:\Projects\DotNet-Assignments\Assignment-4\obj\Debug\net10.0\Assignment-4.pdb
+D:\Projects\DotNet-Assignments\Assignment-4\bin\Debug\net10.0\Assignment-4.deps.json
+D:\Projects\DotNet-Assignments\Assignment-4\bin\Debug\net10.0\Assignment-4.runtimeconfig.json
+D:\Projects\DotNet-Assignments\Assignment-4\bin\Debug\net10.0\Assignment-4.dll
+D:\Projects\DotNet-Assignments\Assignment-4\bin\Debug\net10.0\Assignment-4.pdb
+D:\Projects\DotNet-Assignments\Assignment-4\obj\Debug\net10.0\Assignment-4.genruntimeconfig.cache
+D:\Projects\DotNet-Assignments\Assignment-4\obj\Debug\net10.0\ref\Assignment-4.dll
