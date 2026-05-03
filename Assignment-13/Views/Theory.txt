@@ -1,0 +1,36 @@
+VIEWS
+
+Definition:
+A View is a virtual table created from one or more tables.
+
+Uses:
+1. Security
+2. Simplify queries
+3. Reusable SQL queries
+4. Hide sensitive data
+
+-------------------------------------------------
+Simple View
+-------------------------------------------------
+
+1. Created from single table
+2. No GROUP BY function
+3. No aggregate functions
+4. Easy to update
+
+Example:
+SELECT EmployeeName FROM Employees;
+
+-------------------------------------------------
+Complex View
+-------------------------------------------------
+
+1. Created from multiple tables or functions
+2. Uses GROUP BY
+3. Uses aggregate functions
+4. Difficult to update
+
+Example:
+SELECT Department, AVG(Salary)
+FROM Employees
+GROUP BY Department;

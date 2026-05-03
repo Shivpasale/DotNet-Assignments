@@ -1,0 +1,41 @@
+DIFFERENCE BETWEEN STORED PROCEDURE AND FUNCTION
+
+
+Stored Procedure
+---------------------------------------------------------
+1. A Stored Procedure may or may not return value.
+
+2. Procedure can return multiple values.
+
+3. Procedure is executed using CALL statement.
+
+4. Procedure can contain INSERT, UPDATE, DELETE.
+
+5. Procedure cannot be used directly in SELECT statement.
+
+6. Used for business logic and operations.
+
+
+Function
+---------------------------------------------------------
+1. Function always returns a value.
+
+2. Function returns only one value.
+
+3. Function is called inside SELECT statement.
+
+4. Function mainly performs calculations.
+
+5. Function can be used directly in SQL queries.
+
+6. Used for calculations and reusable expressions.
+
+
+Example
+---------------------------------------------------------
+
+Stored Procedure:
+CALL GetAllEmployees();
+
+Function:
+SELECT GetAnnualSalary(50000);

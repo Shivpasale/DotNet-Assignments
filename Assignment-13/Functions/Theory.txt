@@ -1,0 +1,21 @@
+FUNCTION
+
+Definition:
+A Function is a database object that returns a single value.
+
+Uses:
+1. Perform calculations
+2. Reusable logic
+3. Data manipulation
+
+Advantages:
+- Reusable
+- Easy calculations
+- Better readability
+
+Syntax:
+CREATE FUNCTION FunctionName()
+RETURNS datatype
+BEGIN
+    RETURN value;
+END;

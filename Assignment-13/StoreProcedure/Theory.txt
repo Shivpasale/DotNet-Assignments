@@ -1,0 +1,22 @@
+STORE PROCEDURE
+
+Definition:
+A Stored Procedure is a precompiled SQL query stored in the database.
+
+Uses:
+1. Reusable code
+2. Better performance
+3. Reduce duplicate SQL code
+4. Security
+
+Advantages:
+- Fast execution
+- Easy maintenance
+- Reusable
+- Secure
+
+Syntax:
+CREATE PROCEDURE ProcedureName()
+BEGIN
+    SQL Statements;
+END;

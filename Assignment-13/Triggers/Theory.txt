@@ -1,0 +1,36 @@
+TRIGGERS
+
+Definition:
+A Trigger is a special type of stored program that automatically executes when an event occurs in a table.
+
+Uses:
+1. Automatic validation
+2. Logging changes
+3. Data auditing
+4. Security
+
+Types of Triggers:
+
+1. BEFORE INSERT Trigger
+   Executes before inserting data.
+
+2. AFTER INSERT Trigger
+   Executes after inserting data.
+
+3. BEFORE UPDATE Trigger
+   Executes before updating data.
+
+4. AFTER UPDATE Trigger
+   Executes after updating data.
+
+5. BEFORE DELETE Trigger
+   Executes before deleting data.
+
+6. AFTER DELETE Trigger
+   Executes after deleting data.
+
+Advantages:
+- Automatic execution
+- Data consistency
+- Security
+- Audit tracking

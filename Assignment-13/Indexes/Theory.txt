@@ -1,0 +1,41 @@
+INDEXES
+
+Definition:
+Indexes are used to improve the speed of data retrieval operations in SQL.
+
+Uses:
+1. Faster searching
+2. Faster sorting
+3. Improve query performance
+
+Advantages:
+- Fast SELECT queries
+- Better performance
+- Faster filtering
+
+Disadvantages:
+- Extra storage required
+- INSERT/UPDATE slower
+
+-------------------------------------------------
+Clustered Index
+-------------------------------------------------
+
+1. Physically sorts data in table.
+2. Only one clustered index allowed.
+3. Faster for range queries.
+
+Example:
+PRIMARY KEY
+
+-------------------------------------------------
+Non-Clustered Index
+-------------------------------------------------
+
+1. Creates separate structure from table.
+2. Multiple non-clustered indexes allowed.
+3. Faster searching.
+
+Example:
+CREATE INDEX idx_name
+ON Employees(EmployeeName);

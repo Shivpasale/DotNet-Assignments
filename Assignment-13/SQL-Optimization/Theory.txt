@@ -1,0 +1,30 @@
+SQL QUERY OPTIMIZATION
+
+Definition:
+SQL Optimization means improving SQL query performance.
+
+Techniques:
+
+1. Use indexes
+2. Avoid SELECT *
+3. Use WHERE clause
+4. Use proper joins
+5. Avoid unnecessary subqueries
+6. Use LIMIT when needed
+7. Use optimized stored procedures
+8. Use EXPLAIN to analyze query performance
+
+Advantages:
+- Faster execution
+- Better performance
+- Reduced memory usage
+- Better scalability
+
+Example:
+
+Bad Query:
+SELECT * FROM Employees;
+
+Optimized Query:
+SELECT EmployeeName
+FROM Employees;
